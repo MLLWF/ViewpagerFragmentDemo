@@ -6,6 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.Gravity;
 import android.widget.TextView;
 
+import com.example.a20161005.viewpagerfragmentdemo.lazyloadfragment.LazyFragment1;
+import com.example.a20161005.viewpagerfragmentdemo.lazyloadfragment.LazyFragment2;
+import com.example.a20161005.viewpagerfragmentdemo.lazyloadfragment.LazyFragment3;
+
 /**
  * Created by ML on 2017/3/15.
  */
@@ -16,18 +20,27 @@ public class ViewPagerFragmentActivity extends BaseViewPagerFragmentActivity {
     private Fragment mFragmentTwo;
     private Fragment mFragmentThree;
 
+    private LazyFragment1 mLazyFragment1;
+    private LazyFragment2 mLazyFragment2;
+    private LazyFragment3 mLazyFragment3;
+
     private TextView mTextViewOne;
     private TextView mTextViewTwo;
     private TextView mTextViewThree;
 
     @Override
     public void initFragmentList() {
-        mFragmentOne = new FragmentOne();
-        mFragmentTwo = new FragmentTwo();
-        mFragmentThree = new FragmentThree();
-        mFragmentList.add(mFragmentOne);
-        mFragmentList.add(mFragmentTwo);
-        mFragmentList.add(mFragmentThree);
+//        mFragmentOne = new FragmentOne();
+        //        mFragmentTwo = new FragmentTwo();
+        //        mFragmentThree = new FragmentThree();
+
+        mLazyFragment1 = new LazyFragment1();
+        mLazyFragment2 = new LazyFragment2();
+        mLazyFragment3 = new LazyFragment3();
+
+        mFragmentList.add(mLazyFragment1);
+        mFragmentList.add(mLazyFragment2);
+        mFragmentList.add(mLazyFragment3);
     }
 
     @Override
